@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import 'country.dart';
 import 'price.dart';
 class Bali extends StatefulWidget {
