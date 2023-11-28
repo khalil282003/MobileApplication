@@ -17,6 +17,7 @@ class _TurkeyState extends State<Turkey> {
         backgroundColor: Color.fromRGBO(186, 12, 47, 1.0),
         title: Text('Turkey'),
         centerTitle: true,
+
       ),
     );
   }
@@ -36,6 +37,7 @@ class MyDropdownMenuWidget extends StatefulWidget {
 
 class _MyDropdownMenuWidgetState extends State<MyDropdownMenuWidget> {
   int selectedNight=0;
+
   @override
   Widget build(BuildContext context) {
     return DropdownMenu(
@@ -67,6 +69,9 @@ class Hotel extends StatefulWidget {
 class _HotelState extends State<Hotel> {
   int _stars=5;
   int get stars => _stars;
+  bool three=true;
+  bool four=false;
+  bool five=false;
 
   @override
   Widget build(BuildContext context) {
@@ -85,6 +90,9 @@ class _HotelState extends State<Hotel> {
                         _stars= val as int;
                         widget.updateHotel(_stars);
                         //countries[0].updatePrice(200);
+                        five=true;
+                        four=false;
+                        three=false;
 
                       }
                   ),
@@ -104,6 +112,9 @@ class _HotelState extends State<Hotel> {
                           _stars=val as int;
                           widget.updateHotel;
                           //countries[0].updatePrice(150);
+                          five=false;
+                          four=true;
+                          three=false;
                         });
                       }
                   ),
@@ -120,6 +131,9 @@ class _HotelState extends State<Hotel> {
                         setState(() {
                           _stars=val as int;
                           widget.updateHotel;
+                          five=false;
+                          four=false;
+                          three=true;
                         });
                       }
                   ),
@@ -131,6 +145,7 @@ class _HotelState extends State<Hotel> {
           IconButton(
 
               onPressed: (){
+                countries[0].resetPrice(400);
                 if(stars==3){
                   countries[0].updatePrice(100);
                 }

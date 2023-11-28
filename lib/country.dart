@@ -11,9 +11,24 @@ class Country{
   String get name => _name;
   double get getPrice => price;
   String get image1 =>_img1;
-  void updatePrice(int p){
+  void resetPrice(double p){
+    price=p;
+  }
+  void updatePrice(double p){
     price+=p;
   }
+  /*double updatePrice(int s){
+    if(s==3){
+      return price*1.2+50;
+    }
+    else if(s==4){
+      return price*1.35+50;
+    }
+    else{
+      return price*1.5+50;
+    }
+    //the 50 is because
+  }*/
 
   @override
   String toString(){

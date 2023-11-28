@@ -119,7 +119,7 @@ class _HotelState extends State<Hotel> {
             ],),
           IconButton(
               onPressed: (){
-
+                countries[2].resetPrice(400);
                 if(stars==3){
                   countries[2].updatePrice(300);
                 }

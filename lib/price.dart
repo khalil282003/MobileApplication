@@ -52,7 +52,9 @@ class _PriceState extends State<Price> {
       ),
       body: Column(
         children: [
-          Text("$x"),
+          Center(
+          child: Text("$x", style: TextStyle(fontSize: 18),),
+          ),
         ],
       ),
     );
