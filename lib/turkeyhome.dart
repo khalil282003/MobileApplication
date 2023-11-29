@@ -19,11 +19,7 @@ class _HomeState extends State<Turkeyhome> {
     });
 
   }
-  void updateHotel(int s){
-    setState(() {
-      stars=s;
-    });
-  }
+
   @override
   Widget build(BuildContext context) {
     double screenWidth = MediaQuery.of(context).size.width;
@@ -65,7 +61,7 @@ class _HomeState extends State<Turkeyhome> {
               ),
               Column(
                 children: [
-                  Hotel(updateHotel: updateHotel),
+                  Hotels(),
                 ],
               ),
             ],

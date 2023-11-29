@@ -55,7 +55,7 @@ class _HomeState extends State<Balihome> {
                 ),
                 Column(
                   children: [
-                    Hotel(updateHotel: updateHotel),
+                    Hotels(),
                   ],
                 ),
               ],

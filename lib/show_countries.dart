@@ -29,7 +29,8 @@ class _ShowCountriesState extends State<ShowCountries> {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
+    return
+      Column(
         children: [
     Expanded(
     child: ListView.builder(
@@ -54,7 +55,7 @@ class _ShowCountriesState extends State<ShowCountries> {
     SizedBox(
     width: widget.width * 0.28,
     child: Text(
-    countries[index].toString(),
+    countries[index].toString2(),
     style: const TextStyle(fontSize: 18),
     ),
     ),
@@ -73,8 +74,7 @@ class _ShowCountriesState extends State<ShowCountries> {
     },
     ),
     ),
-    IconButton(
-    icon: const Icon(Icons.airplane_ticket, size:50),
+    FloatingActionButton(
     onPressed: () {
     if (selectedCountryIndex ==0) {
     Navigator.push(
@@ -113,9 +113,14 @@ class _ShowCountriesState extends State<ShowCountries> {
       );
     }
     },
+      child:const Icon(Icons.airplane_ticket, size:50),
+      backgroundColor: Colors.black,
 
     ),
+
     ],
+
     );
+
     }
 }
